@@ -1,278 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrahim Mohamed | AI Engineer & Developer</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-*{box-sizing:border-box}
-
-:root {
-    --primary-cyan: #00e5ff;
-    --bg-dark: #05090f;
-    --card-bg: #0d1624;
-    --text-main: #e0f7fa;
-    --text-dim: #b0c7cf;
-}
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-main);
-    scroll-behavior: smooth;
-    line-height: 1.8; /* زيادة المسافات بين الأسطر */
-}
-
-/* التنسيق العام للأقسام */
-section {
-    padding: 100px 10%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-h1, h2, h3 { 
-    color: var(--primary-cyan); 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h2 { 
-    font-size: 36px; /* تكبير عناوين الأقسام */
-    border-left: 5px solid var(--primary-cyan);
-    padding-left: 15px;
-    margin-bottom: 40px;
-}
-
-p { 
-    font-size: 19px; /* تكبير الخط الأساسي */
-    color: var(--text-dim);
-}
-
-/* Navigation */
-nav {
-    position: fixed; top: 0; width: 100%;
-    padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
-    background: rgba(5, 9, 15, 0.95); 
-    border-bottom: 1px solid rgba(0, 229, 255, 0.2); 
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-nav b { font-size: 22px; letter-spacing: 2px; }
-nav a {
-    color: #fff; margin-left: 25px; 
-    text-decoration: none; font-size: 15px; font-weight: 500;
-    transition: 0.3s;
-}
-nav a:hover { color: var(--primary-cyan); }
-
-/* HERO SECTION */
-.hero { 
-    text-align: center; 
-    padding-top: 180px;
-    background: radial-gradient(circle at center, rgba(0,229,255,0.05) 0%, transparent 70%);
-}
-.hero img {
-    width: 220px; /* تكبير الصورة */
-    height: 220px;
-    border-radius: 50%;
-    border: 4px solid var(--primary-cyan);
-    box-shadow: 0 0 50px rgba(0, 229, 255, 0.3);
-    object-fit: cover;
-    margin-bottom: 30px;
-}
-.hero h1 { font-size: 58px; margin: 10px 0; } /* خط كبير جداً للاسم */
-.hero p { font-size: 22px; max-width: 900px; margin: 20px auto; color: var(--text-main); }
-
-.contact-strip { 
-    margin: 30px 0; 
-    font-size: 18px; 
-    display: flex; 
-    justify-content: center; 
-    gap: 30px; 
-    flex-wrap: wrap; 
-}
-.contact-strip span i { color: var(--primary-cyan); margin-right: 8px; }
-
-/* Grid Cards */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-.card {
-    background: var(--card-bg);
-    padding: 35px;
-    border-radius: 15px;
-    border: 1px solid rgba(0,229,255,0.1);
-    transition: 0.4s;
-}
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-cyan);
-    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
-}
-.card h3 { font-size: 24px; margin-top: 0; }
-
-/* Skills & List Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
-.tags li {
-    background: rgba(0, 229, 255, 0.1);
-    color: var(--primary-cyan);
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    border: 1px solid rgba(0, 229, 255, 0.3);
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: var(--primary-cyan);
-    color: #000;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-    margin: 10px;
-}
-.btn:hover { background: #fff; transform: scale(1.05); }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 50px;
-    background: #02050a;
-    border-top: 1px solid rgba(0,229,255,0.1);
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 40px; }
-    nav { padding: 15px 5%; }
-    nav div { display: none; } /* إخفاء الروابط في الموبايل لتبسيط التصميم */
-    section { padding: 60px 5%; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Mohamed | AI Engineer & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <b style="color:#00e5ff">IBRAHIM.AI</b>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <nav>
+        <b style="color:#00e5ff">IBRAHIM.AI</b>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<section id="home" class="hero">
-    <img src="me.jpg.jpg" alt="Ibrahim Mohamed">
-    <h1>Ibrahim Mohamed</h1>
-    <p>AI Student & Software Developer</p>
-    
-    <div class="contact-strip">
-        <span><i class="fas fa-location-dot"></i> Cairo,Egypt</span>
-        <span><i class="fas fa-phone"></i> +20 114 164 5383</span>
-        <span><i class="fas fa-envelope"></i> ibrahim12105050@gmail.com</span>
-    </div>
+    <section id="home" class="hero">
+        <img src="me.jpg.jpg" alt="Ibrahim Mohamed">
+        <h1>Ibrahim Mohamed</h1>
+        <p>AI Student & Software Developer</p>
+        
+        <div class="contact-strip">
+            <span><i class="fas fa-location-dot"></i> Cairo,Egypt</span>
+            <span><i class="fas fa-phone"></i> +20 114 164 5383</span>
+            <span><i class="fas fa-envelope"></i> ibrahim12105050@gmail.com</span>
+        </div>
 
-    <div style="margin-top:30px">
-        <a class="btn" href="https://github.com/ibrahim121050" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/ibrahim-mohamed-41h" target="_blank" style="background:#fff"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <div style="margin-top:30px">
+            <a class="btn" href="https://github.com/ibrahim121050" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a class="btn" href="https://linkedin.com/in/ibrahim-mohamed-41h" target="_blank" style="background:#fff"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am Ibrahim Mohamed, a third-year Artificial Intelligence student and software developer with strong experience in full stack development and AI-driven solutions. During my internship at the Digital Egypt Pioneers Initiative (DEPI), I built scalable web applications with ASP.NET Core MVC and Web API, engineered backends using C# and SQL Server, and enhanced front-end responsiveness with modern web technologies. My academic and project work further demonstrates my ability to design predictive models, automate workflows, and apply machine learning techniques to real-world problems.
+        </p>
+
+        <p>Freelance clients value developers who deliver:</p>
+        
+        <ul>
+            <li>Reliable, maintainable code.</li>
+            <li>Clear communication.</li>
+            <li>Adaptability to evolving business needs.</li>
+        </ul>
+
+        <p>
+            My approach combines analytical thinking with practical implementation, ensuring every project reflects precision, reliability, and long-term impact. Whether developing AI models, building full stack applications, or optimizing performance, I focus on creating solutions that empower clients to achieve their objectives with confidence.
+        </p>
+    </section>
+
+    <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <div style="display:flex; justify-content:space-between; align-items: flex-start; flex-wrap:wrap; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 22px;">Helwan International Technological University (HITU)</h3>
+            <span style="color:var(--primary-cyan); font-weight:bold; font-size:16px;">10/2023 – Present</span>
+        </div>
+
+        <p style="color:var(--text-main); font-weight:bold; margin-bottom: 15px;">Bachelor’s Degree in Artificial Intelligence</p>
+        
+        <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 25px;">
+            <li>Currently a third-year student with a strong academic record (Grade: Very Good).</li>
+            <li>Focused on Machine Learning, Deep Learning, and Full Stack Development.</li>
+            <li>Leveraging academic knowledge to design scalable, AI-driven software solutions and high-performance web applications.</li>
+        </ul>
+
+        <ul class="tags">
+            <li>AI</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Full Stack</li>
+            <li>Python</li>
+        </ul>
     </div>
 </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a third-year Artificial Intelligence student at Helwan International Technological University. 
-        My passion lies in integrating machine learning and deep learning with modern web technologies. 
-        I am currently developing my skills in the DEPI initiative, where I focus on building high-performance applications to solve real-world problems.
-    </p>
-</section>
+
 
 <section id="experience">
     <h2>Work Experience</h2>
     <div class="card">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap">
-            <h3>Full Stack Development Intern</h3>
-            <span style="color:var(--primary-cyan); font-weight:bold; font-size:18px">09/2024 — Present</span>
+        <div style="display:flex; justify-content:space-between; align-items: flex-start; flex-wrap:wrap; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 22px;">Full Stack Development Intern</h3>
+            <span style="color:var(--primary-cyan); font-weight:bold; font-size:16px;">09/2024 – Present</span>
         </div>
-        <p style="color:#fff; font-weight:bold">Digital Egypt Pioneers Initiative (DEPI)</p>
-        <p>
-            Architecting scalable web applications using **ASP.NET Core MVC** and **Web API**. 
-            Engineering robust backends with C# and SQL Server while ensuring a seamless user experience through optimized frontend responsiveness.
-        </p>
+
+        <p style="color:var(--text-main); font-weight:bold; margin-bottom: 15px;">Digital Egypt Pioneers Initiative (DEPI)</p>
+        
+        <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 20px;">
+            <li>Designed and deployed scalable web applications using ASP.NET Core MVC and Web API.</li>
+            <li>Built and optimized backends with C#, SQL Server, and Entity Framework, ensuring reliability and performance.</li>
+            <li>Enhanced front-end responsiveness with HTML5, CSS3, and JavaScript, delivering smooth user experiences.</li>
+            <li>Applied Git/GitHub for version control and maintained code quality through unit testing.</li>
+        </ul>
+
+        <div style="background: rgba(0, 229, 255, 0.05); padding: 15px; border-left: 3px solid var(--primary-cyan); margin-bottom: 20px;">
+            <p style="font-size: 17px; margin: 0; color: #fff; line-height: 1.6;">
+                <strong>Key Value for Clients:</strong><br>
+                This experience demonstrates my ability to deliver end-to-end solutions, from architecture to deployment, while ensuring maintainability, scalability, and clear documentation—qualities freelance clients consistently seek in software developers.
+            </p>
+        </div>
+
+        <ul class="tags">
+            <li>ASP.NET Core</li>
+            <li>C#</li>
+            <li>SQL Server</li>
+            <li>Entity Framework</li>
+            <li>Web API</li>
+            <li>Git/GitHub</li>
+        </ul>
     </div>
 </section>
+
+
+
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="grid-container">
+        
         <div class="card">
-            <h3><i class="fas fa-robot"></i> Automated Calculator Bot</h3>
-            <p>Built with **UiPath Studio**. Automated complex mathematical workflows using RPA, achieving a 90% reduction in manual processing time.</p>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap">
+                <h3 style="margin: 0; font-size: 20px;"><i class="fas fa-robot"></i> Automated Calculator Bot (RPA)</h3>
+                <span style="color:var(--primary-cyan); font-weight:bold; font-size: 15px;">11/2025</span>
+            </div>
+            <p style="color:#fff; font-weight:bold; margin-top:10px; margin-bottom: 10px;">UiPath Studio</p>
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 20px;">
+                <li>Automated complex mathematical operations, reducing manual processing time by 90%.</li>
+                <li>Designed workflows with Sequences and Flowcharts to handle dynamic user inputs.</li>
+                <li>Executed the full RPA lifecycle from task analysis to deployment.</li>
+            </ul>
+            <ul class="tags">
+                <li>RPA</li>
+                <li>UiPath</li>
+                <li>Automation</li>
+                <li>Workflow</li>
+            </ul>
         </div>
+
         <div class="card">
-            <h3><i class="fas fa-chart-line"></i> Student GPA Prediction</h3>
-            <p>Developed using **Python & Scikit-Learn**. Implemented Linear Regression models to predict student performance with a 92% accuracy rate.</p>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap">
+                <h3 style="margin: 0; font-size: 20px;"><i class="fas fa-chart-line"></i> Student Performance Prediction (ML)</h3>
+                <span style="color:var(--primary-cyan); font-weight:bold; font-size: 15px;">07/2025</span>
+            </div>
+            <p style="color:#fff; font-weight:bold; margin-top:10px; margin-bottom: 10px;">Python, Scikit-Learn</p>
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 20px;">
+                <li>Built a predictive model for student GPA with 92% accuracy using Linear Regression.</li>
+                <li>Applied data cleaning and one-hot encoding to improve model performance.</li>
+                <li>Visualized metrics with Matplotlib and evaluated results using MSE and R² Score.</li>
+            </ul>
+            <ul class="tags">
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Scikit-Learn</li>
+                <li>Data Visualization</li>
+            </ul>
         </div>
+
     </div>
 </section>
+
+
+
+
 
 <section id="skills">
-    <h2>Technical Mastery</h2>
-    <div class="grid-container" style="grid-template-columns: 1fr 1fr;">
-        <div>
-            <h3 style="font-size:20px"><i class="fas fa-code"></i> Programming & Web</h3>
-            <ul class="tags">
-                <li>Python</li> <li>C# / .NET</li> <li>Java</li> <li>JavaScript</li> <li>SQL Server</li> <li>HTML5 / CSS3</li>
-            </ul>
+    <h2>Skills</h2>
+    
+    <div class="grid-container">
+        <div class="card">
+            <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+            <div style="margin-top: 20px;">
+                <p style="margin-bottom: 8px; font-size: 16px;"><strong style="color:var(--primary-cyan)">Programming:</strong></p>
+                <ul class="tags" style="margin-bottom: 15px;">
+                    <li>Python</li> <li>C#</li> <li>Java</li> <li>JavaScript</li>
+                </ul>
+
+                <p style="margin-bottom: 8px; font-size: 16px;"><strong style="color:var(--primary-cyan)">AI & ML:</strong></p>
+                <ul class="tags" style="margin-bottom: 15px;">
+                    <li>Machine Learning</li> <li>Deep Learning</li> <li>Algorithms</li>
+                </ul>
+
+                <p style="margin-bottom: 8px; font-size: 16px;"><strong style="color:var(--primary-cyan)">Web Development:</strong></p>
+                <ul class="tags" style="margin-bottom: 15px;">
+                    <li>ASP.NET Core</li> <li>HTML5</li> <li>CSS3</li> <li>JavaScript</li> <li>SQL Server</li> <li>Entity Framework</li>
+                </ul>
+
+                <p style="margin-bottom: 8px; font-size: 16px;"><strong style="color:var(--primary-cyan)">Cloud & Tools:</strong></p>
+                <ul class="tags">
+                    <li>Git/GitHub</li> <li>Cloud Computing</li> <li>Unit Testing</li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <h3 style="font-size:20px"><i class="fas fa-brain"></i> AI & RPA</h3>
-            <ul class="tags">
-                <li>Machine Learning</li> <li>Deep Learning</li> <li>Computer Vision</li> <li>NLP</li> <li>UiPath (RPA)</li> <li>Data Analytics</li>
+
+        <div class="card">
+            <h3><i class="fas fa-users"></i> Soft Skills</h3>
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-top: 20px;">
+                <li style="margin-bottom: 15px; font-size: 18px;">Problem Solving & Analytical Thinking</li>
+                <li style="margin-bottom: 15px; font-size: 18px;">Teamwork & Collaboration</li>
+                <li style="margin-bottom: 15px; font-size: 18px;">Time Management & Reliability</li>
             </ul>
         </div>
     </div>
 </section>
+
+
+
+
+
 
 <section id="certificates">
-    <h2>Certificates</h2>
+    <h2>Certifications & Training</h2>
     <div class="grid-container">
-        <div class="card" style="padding:25px">
-            <i class="fas fa-certificate" style="font-size:30px; color:var(--primary-cyan)"></i>
-            <h3 style="margin-top:15px">ICAIL License (2025)</h3>
-            <p>International Certificate in AI License - Mastered TensorFlow & Keras fundamentals.</p>
+        
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 20px;"><i class="fas fa-certificate"></i> International Certificate in AI License (ICAIL)</h3>
+                <span style="color:var(--primary-cyan); font-weight:bold; font-size:15px;">02/2025</span>
+            </div>
+            <p style="color:#fff; font-weight:bold; margin-bottom: 15px;">Ministry of Youth and Sports & AMG Academy</p>
+            
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 20px;">
+                <li>Gained expertise in Machine Learning and Deep Learning using TensorFlow, Keras, and OpenCV.</li>
+                <li>Built the Student Performance Predictor project with Scikit-Learn.</li>
+                <li>Applied Computer Vision and NLP techniques for image recognition and text processing.</li>
+            </ul>
+
+            <ul class="tags">
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>OpenCV</li>
+                <li>Scikit-Learn</li>
+                <li>Computer Vision</li>
+                <li>NLP</li>
+            </ul>
         </div>
-        <div class="card" style="padding:25px">
-            <i class="fas fa-certificate" style="font-size:30px; color:var(--primary-cyan)"></i>
-            <h3 style="margin-top:15px">IBM AI Fundamentals</h3>
-            <p>Focused on Machine Learning, NLP, and AI Ethics using IBM Watson Studio.</p>
+
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 20px;"><i class="fas fa-award"></i> AI Fundamentals with Capstone Project</h3>
+                <span style="color:var(--primary-cyan); font-weight:bold; font-size:15px;">12/2025</span>
+            </div>
+            <p style="color:#fff; font-weight:bold; margin-bottom: 15px;">IBM SkillsBuild</p>
+            
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-dim); margin-bottom: 20px;">
+                <li>Mastered core AI concepts: Machine Learning, Deep Learning, and NLP.</li>
+                <li>Built and deployed AI models using IBM Watson Studio.</li>
+                <li>Completed a capstone project applying theoretical knowledge to real-world scenarios.</li>
+                <li>Certified in AI Ethics and responsible development practices.</li>
+            </ul>
+
+            <ul class="tags">
+                <li>IBM Watson</li>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>NLP</li>
+                <li>AI Ethics</li>
+            </ul>
         </div>
+
     </div>
 </section>
 
-<section id="contact" style="text-align:center">
-    <h2>Let's Build Something Together</h2>
-    <p>I'm always open to discussing new projects or internship opportunities.</p>
-    <a class="btn" href="mailto:ibrahim12105050@gmail.com"><i class="fas fa-paper-plane"></i> Send an Email</a>
-    <p style="margin-top:20px">Phone: +20 114 164 5383</p>
-</section>
 
-<footer>
-    <p>&copy; 2025 Ibrahim Mohamed.</p>
-</footer>
+
+
+
+
+
+
+
+    <section id="contact" style="text-align:center; padding: 60px 20px;">
+        <p style="font-family: serif; font-size: 20px; color: var(--primary-cyan); margin-bottom: 5px;">Call to Action</p>
+        <h2 style="margin-top: 0;">Let’s Build the Future Together.</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                I am an innovative developer bridging the gap between <strong>Artificial Intelligence</strong> and <strong>Full-Stack Engineering</strong>. 
+                I specialize in building scalable, intelligent systems designed to exceed expectations and deliver tangible value to your organization.
+            </p>
+            
+            <p style="margin: 20px 0;">
+                <strong>Contact me today:</strong> 
+                <a href="mailto:ibrahim12105050@gmail.com" style="color: var(--primary-cyan); text-decoration: underline;">ibrahim12105050@gmail.com</a>
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+                <a class="btn" href="mailto:ibrahim12105050@gmail.com">
+                    <i class="fas fa-paper-plane"></i> Email Me
+                </a>
+                <a class="btn" href="https://linkedin.com/in/ibrahim-mohamed-41h" target="_blank" style="background: transparent; border: 1px solid var(--primary-cyan); color: var(--primary-cyan);">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <p style="margin-top:20px">Phone: +20 114 164 5383</p>
+        </div>
+    </section>
+
+    <section id="thanks" style="text-align:center; padding: 80px 20px;">
+        <h2 style="color: var(--primary-cyan);">Thank You</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; line-height: 1.6; color: #fff;">
+                I appreciate you reviewing my portfolio, which reflects my passion for <strong>Artificial Intelligence</strong> and <strong>Full-Stack Development</strong>.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ibrahim Mohamed.</p>
+    </footer>
 
 </body>
-</html> 
+</html>
