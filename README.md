@@ -31,7 +31,7 @@ Welcome to my professional portfolio! I am a passionate **Artificial Intelligenc
 | :--- | :--- | :--- |
 | **GPA Predictor** | Python, ML | 92% Accuracy using Linear Regression. |
 | **Automated Calculator** | UiPath (RPA) | Reduced manual processing time by 90%. |
-| **Personal Portfolio** | HTML, CSS, JS | High-performance, responsive web presence. |
+| **Personal Portfolio** | HTML, CSS | High-performance, responsive web presence. |
 
 ---
 
